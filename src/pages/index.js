@@ -3,30 +3,46 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import Hero from "../components/Hero"
 import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+  // Add social links to the about section you asshole
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
-      <Bio />
+      <Seo title="Peter Jewicz | Full Stack Engineer" />
+      <Hero />
+      <div className="bg-primary py-28">
+        <div className="max-w-2xl text-center mx-auto text-white">
+          <h2 className="text-4xl">Hail and Well Met</h2>
+          <p>
+            Loremum ipsum sd aow eiryt larary psose itsan
+            Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan
+            Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan
+            Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan
+          </p>
+        </div>
+      </div>
+      <div>
+        <h2 className="text-4xl">My Startups</h2>
+        <p>
+          Always busy, over the years I've worked on a number of startup projects. Below, find
+          the ones still kicking and see where I've worked.
+        </p>
+      </div>
+      <div className="py-28 px-4 bg-secondary text-white">
+        <h1 className="text-4xl">Total Web Connections</h1>
+      </div>
+      <div className="py-28 px-4 bg-tetriary text-white">
+        <h1 className="text-4xl">Mellow Golem Games</h1>
+      </div>
+      <div className="py-28 px-4 bg-quad text-white">
+        <h1 className="text-4xl">Nitor Fitness</h1>
+      </div>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
