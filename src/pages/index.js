@@ -27,20 +27,20 @@ const BlogIndex = ({ data, location }) => {
           </p>
         </div>
       </div>
-      <div>
+      <div className="py-28 text-center max-w-2xl mx-auto">
         <h2 className="text-4xl">My Startups</h2>
         <p>
           Always busy, over the years I've worked on a number of startup projects. Below, find
           the ones still kicking and see where I've worked.
         </p>
       </div>
-      <div className="py-28 px-4 bg-secondary text-white">
+      <div className="py-28 px-4">
         <h1 className="text-4xl">Total Web Connections</h1>
       </div>
-      <div className="py-28 px-4 bg-tetriary text-white">
+      <div className="py-28 px-4">
         <h1 className="text-4xl">Mellow Golem Games</h1>
       </div>
-      <div className="py-28 px-4 bg-quad text-white">
+      <div className="py-28 px-4">
         <h1 className="text-4xl">Nitor Fitness</h1>
       </div>
       <ol style={{ listStyle: `none` }}>
