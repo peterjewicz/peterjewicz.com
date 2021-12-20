@@ -3,7 +3,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      primary: '#31AFD4',
+      // primary: '#31AFD4',
+      primary: '#1076a1',
       secondary: '#7D5BA6', // change
       tetriary: "#ffd700",
       quad: "blue",
