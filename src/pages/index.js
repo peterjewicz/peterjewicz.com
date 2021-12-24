@@ -81,19 +81,27 @@ const BlogIndex = ({ data, location }) => {
         </p>
       </div>
       <div className="py-28 px-4">
-        <h1 className="text-4xl">Total Web Connections</h1>
+        <h3 className="text-4xl">Total Web Connections</h3>
         <p>Software development company. Currently working on a mix of client and internal projects.</p>
         <a href="#"><button>Visit</button></a>
       </div>
       <div className="py-28 px-4">
-        <h1 className="text-4xl">Mellow Golem Games</h1>
+        <h3 className="text-4xl">Mellow Golem Games</h3>
         <p>Game development and related content. Currently working on RPG games.</p>
         <a href="#"><button>Visit</button></a>
       </div>
       <div className="py-28 px-4">
-        <h1 className="text-4xl">Nitor Fitness</h1>
+        <h3 className="text-4xl">Nitor Fitness</h3>
         <p>Fitness software offering customized workouts tailored to individuals.</p>
         <a href="#"><button>Visit</button></a>
+      </div>
+
+      <div className="py-28 px-4">
+        <div className="text-center max-w-5xl">
+          <h2 className="text-4xl">Past Projects</h2>
+          <p>A small sample of what I've worked on in the past.</p>
+        </div>
+
       </div>
     </Layout>
   )
