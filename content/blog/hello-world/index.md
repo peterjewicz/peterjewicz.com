@@ -26,6 +26,10 @@ You can also write code blocks here!
 ```js
 const saltyDuckEgg = "chinese preserved food product"
 ```
+```clojure
+(defn tester []
+  (+ 2 2))
+```
 
 | Number | Title                                    | Year |
 | :----- | :--------------------------------------- | ---: |
