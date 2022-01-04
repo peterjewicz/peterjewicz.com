@@ -71,33 +71,50 @@ const BlogIndex = ({ data, location }) => {
       <div className="py-28 text-center  mx-auto relative">
         <div
           className="absolute bg-primary w-full"
-          style={{height: "1000px", zIndex: -2, background: 'linear-gradient(180deg, rgba(16,118,161,1) 0%, rgba(16,118,161,1) 47%, rgba(255,255,255,1) 100%)'}}
+          style={{height: "1200px", zIndex: -2, background: 'linear-gradient(180deg, rgba(16,118,161,1) 0%, rgba(16,118,161,1) 47%, rgba(255,255,255,1) 100%)'}}
         >
         </div>
-        <h2 className="text-4xl">My Startups</h2>
-        <p>
-          Always busy, over the years I've worked on a number of startup projects. Below, find
-          the ones still kicking and see where I've worked.
-        </p>
+        <div className="text-white pt-28 max-w-2xl mx-auto">
+          <h2 className="text-4xl">My Startups</h2>
+          <p>
+            Always busy, over the years I've worked on a number of startup projects. Below, find
+            the ones still kicking and see where I've worked.
+          </p>
+        </div>
       </div>
-      <div className="py-28 px-4">
-        <h3 className="text-4xl">Total Web Connections</h3>
-        <p>Software development company. Currently working on a mix of client and internal projects.</p>
-        <a href="#"><button>Visit</button></a>
+      <div className="py-28 px-4 md:flex max-w-5xl mx-auto">
+        <div>
+          <h3 className="text-4xl">Total Web Connections</h3>
+          <p>Software development company. Currently working on a mix of client and internal projects.</p>
+          <a href="#"><button>Visit</button></a>
+        </div>
+        <div>
+          <p>Img Here</p>
+        </div>
       </div>
-      <div className="py-28 px-4">
-        <h3 className="text-4xl">Mellow Golem Games</h3>
-        <p>Game development and related content. Currently working on RPG games.</p>
-        <a href="#"><button>Visit</button></a>
+      <div className="py-28 px-4 md:flex max-w-5xl mx-auto">
+        <div>
+          <p>Img Here</p>
+        </div>
+        <div>
+          <h3 className="text-4xl">Mellow Golem Games</h3>
+          <p>Game development and related content. Currently working on RPG games.</p>
+          <a href="#"><button>Visit</button></a>
+        </div>
       </div>
-      <div className="py-28 px-4">
-        <h3 className="text-4xl">Nitor Fitness</h3>
-        <p>Fitness software offering customized workouts tailored to individuals.</p>
-        <a href="#"><button>Visit</button></a>
+      <div className="py-28 px-4 md:flex max-w-5xl mx-auto">
+        <div>
+          <h3 className="text-4xl">Nitor Fitness</h3>
+          <p>Fitness software offering customized workouts tailored to individuals.</p>
+          <a href="#"><button>Visit</button></a>
+        </div>
+        <div>
+          <p>Img Here</p>
+        </div>
       </div>
 
       <div className="py-28 px-4">
-        <div className="text-center max-w-5xl">
+        <div className="max-w-2xl text-center mx-auto">
           <h2 className="text-4xl">Past Projects</h2>
           <p>A small sample of what I've worked on in the past.</p>
         </div>
