@@ -7,6 +7,10 @@ import Hero from "../components/Hero"
 import Seo from "../components/seo"
 import BlogCard from "../components/BlogCard"
 
+import Totalwebconnections from "../images/totalwebconnections.png"
+import Mellowgolemgames from "../images/mellowgolemgames.png"
+import NitorFitness from "../images/nitorfitness.png"
+
 // <ol style={{ listStyle: `none` }}>
 //   {posts.map(post => {
 //     const title = post.frontmatter.title || post.fields.slug
@@ -83,33 +87,33 @@ const BlogIndex = ({ data, location }) => {
         </div>
       </div>
       <div className="py-28 px-4 md:flex max-w-5xl mx-auto">
-        <div>
+        <div className="px-2">
           <h3 className="text-4xl">Total Web Connections</h3>
           <p>Software development company. Currently working on a mix of client and internal projects.</p>
           <a href="#"><button>Visit</button></a>
         </div>
-        <div>
-          <p>Img Here</p>
+        <div className="px-2">
+          <img src={Totalwebconnections} width="640px" alt="Total Web Connections" />
         </div>
       </div>
       <div className="py-28 px-4 md:flex max-w-5xl mx-auto">
-        <div>
-          <p>Img Here</p>
+        <div className="px-2">
+          <img src={Mellowgolemgames} width="340px" alt="Mellow Golem Games" />
         </div>
-        <div>
+        <div className="px-2">
           <h3 className="text-4xl">Mellow Golem Games</h3>
           <p>Game development and related content. Currently working on RPG games.</p>
           <a href="#"><button>Visit</button></a>
         </div>
       </div>
       <div className="py-28 px-4 md:flex max-w-5xl mx-auto">
-        <div>
+        <div className="px-2">
           <h3 className="text-4xl">Nitor Fitness</h3>
           <p>Fitness software offering customized workouts tailored to individuals.</p>
           <a href="#"><button>Visit</button></a>
         </div>
-        <div>
-          <p>Img Here</p>
+        <div className="px-2">
+          <img src={NitorFitness} width="340px" alt="Total Web Connections" />
         </div>
       </div>
 
