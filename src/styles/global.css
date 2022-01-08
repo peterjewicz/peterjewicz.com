@@ -12,3 +12,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
+
+.Button:hover {
+  filter: brightness(0.75);
+}

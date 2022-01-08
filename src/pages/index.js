@@ -91,7 +91,7 @@ const BlogIndex = ({ data, location }) => {
           <h3 className="text-4xl">Total Web Connections</h3>
           <p className="mb-8">Software development company. Currently working on a mix of client and internal projects.</p>
           <div  className="mb-16">
-            <a href="#"><button>Visit</button></a>
+            <a href="#"><button className="transition-all bg-secondary text-lg rounded px-10 py-3 shadow Button">Visit</button></a>
           </div>
         </div>
         <div className="px-2">
@@ -106,7 +106,7 @@ const BlogIndex = ({ data, location }) => {
           <h3 className="text-4xl">Mellow Golem Games</h3>
           <p className="mb-8">Game development and related content. Currently working on RPG games.</p>
           <div  className="mb-16">
-            <a href="#"><button>Visit</button></a>
+            <a href="#"><button className="transition-all bg-secondary text-lg rounded px-10 py-3 shadow Button text-white">Visit</button></a>
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@ const BlogIndex = ({ data, location }) => {
           <h3 className="text-4xl">Nitor Fitness</h3>
           <p className="mb-8">Fitness software offering customized workouts tailored to individuals.</p>
           <div  className="mb-16">
-            <a href="#"><button>Visit</button></a>
+            <a href="#"><button className="transition-all bg-secondary text-lg rounded px-10 py-3 shadow Button text-white">Visit</button></a>
           </div>
         </div>
         <div className="px-2">
