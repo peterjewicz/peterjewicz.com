@@ -11,16 +11,17 @@ Kidding aside, I think it’s a pretty nice introduction to web sockets, sort of
 
 There’s a few pieces of functionally to build out:
 
-Websocket server that broadcasts all messages as they come in.
-Ability for the UI to send a message
-UI responds to and displays messages as they come in
-Server needs to handle when a user disconnects
-With those goals in mind let’s get started.
+1. Websocket server that broadcasts all messages as they come in.
+2. Ability for the UI to send a message
+3. UI responds to and displays messages as they come in
+4. Server needs to handle when a user disconnects
+5. With those goals in mind let’s get started.
 
-Starting Off
-I’m using the repo I put together in my last article, you can find it on Github here.
+## Starting Off
 
-If you just want the end result that’s also on Github here.
+I’m using the repo I put together in my last article, you can find it <a href="https://github.com/peterjewicz/immutant-websockets" target="_blank">on Github here</a>.
+
+If you just want the end result that’s also <a href="https://github.com/peterjewicz/clojure-chat" target="_blank">on Github here.</a>
 
 The repo comes with a simple UI that you can start with
 
@@ -30,7 +31,8 @@ lein fighweel
 
 And also a server that you can spin up with your repl for now. Once that’s all going you should be able to interact with the UI and get some messages back from the server in your console.
 
-Setting Up The UI
+## Setting Up The UI
+
 First let’s get the UI in order. We’ll set the base we need here.
 
 ```clojure
@@ -81,7 +83,8 @@ All this will do is up our base for connection and sending messages, and then de
 
 For now it will just log message we receive to the console and that will allow us to test that the whole chain is working. We’ll revisit this once we set up the server.
 
-Setting Up The Server
+## Setting Up The Server
+
 With the UI in a decent place let’s get the server going. Slightly modified, but not much, from the starter we have this.
 
 ```clojure
@@ -170,7 +173,8 @@ Notice the use of partial, if you’re not familiar with the concept it’s a ve
 
 And there we have it, a fully functioning, if basic, chat program. You’ll be able to connect multiple clients to the server, and see as messages come through on each one.
 
-Next Steps
+## Next Steps
+
 With the program in this basic state there’s a lot of room for improvement. A couple of ideas off the top of my head:
 
 - Show who sent a message

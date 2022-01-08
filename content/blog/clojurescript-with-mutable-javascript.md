@@ -10,7 +10,7 @@ I love Clojurescript, and have been using it almost exclusively for my projects 
 
 Two of the biggest draws of Clojurescript are its immutability, and its easy interop with its host language Javascript. While being able to pull in any Javascript library with ease is nice, it’s important to realize at that point you’re working with Javascript. That sounds like a pretty obvious statement, but it caught me by surprise the first time I saw it happen. There’s a couple of gotchas here, and today I wanted to look at one; you might be losing immutability when you’re working with Javascript even in a Clojurescript project.
 
-For the example in question I’m using the date/time library Moment.js. Whether this is the right choice for the project is not the question here, so let’s just assume it is and using something else is not an option.
+For the example in question I’m using the date/time library <a href="https://momentjs.com/" target="_blank">Moment.js</a>. Whether this is the right choice for the project is not the question here, so let’s just assume it is and using something else is not an option.
 
 After requiring Moment in the file, do the following which creates a moment object, then simply outputs it in a bit easier to read format.
 

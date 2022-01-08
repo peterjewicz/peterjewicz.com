@@ -25,3 +25,22 @@ p {
 .ProjectCard:hover {
   bottom: 1.5rem;
 }
+
+
+.blog-post p {
+  margin: 1.5rem 0;
+  font-size: 1.25rem;
+}
+
+.blog-post h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.blog-post ol, li {
+  margin-left: 24px;
+}
+
+.blog-post ol {
+  list-style: decimal;
+}

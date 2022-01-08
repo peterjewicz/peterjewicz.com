@@ -5,13 +5,14 @@ description: "Use Clojure.Spec to validate api routes"
 ---
 
 
-I was recently working on an API and wanted to ensure that specific routes had a particular data structure before going further into the application. For that, I took a look at Clojure.spec which gives developers a good way to ensure consistency in map data.
+I was recently working on an API and wanted to ensure that specific routes had a particular data structure before going further into the application. For that, I took a look at <a href="https://clojure.org/guides/spec" target="_blank">Clojure.spec</a> which gives developers a good way to ensure consistency in map data.
 
 There’s a lot of great stuff out there about spec, but I had a hard time finding a simple starter guide to handle what I was looking for. I’ve put this together as a very gentle intro to spec that only covers one use case for the tool. I won’t dive into some of the very cool testing stuff you can do with spec, but I do encourage you to read more about it as all the features are very interesting.
 
 Also, note that this example is only looking at the spec implementation and doesn’t do any sort of other checks on the data. In a production environment you should probably be doing additional checks or escaping on the data to ensure it’s not malicious. This example is simply checking that the data conforms to some specific types and values and nothing outside of that.
 
-Our Basic Api
+## Our Basic Api
+
 For this let’s create a very basic Person creating function. We want our Person to have the following attributes along with some basic types we want to enforce:
 
 ```clojure
@@ -23,7 +24,7 @@ Position: String (Specific values)
 
 The only one above that has anything interesting going on is Position which will be required to be a value included in a predetermined set. We’ll get to that in a minute though, first, let’s look at a base skeleton for the code.
 
-In this very basic example I’m using Pedestal if you care about the route setup, but I’m just going to show the ring handler. The point is to demonstrate the spec stuff so I’ll strip out the Pedestal specific code.
+In this very basic example I’m using <a href="http://pedestal.io/" target="_blank">Pedestal</a> if you care about the route setup, but I’m just going to show the ring handler. The point is to demonstrate the spec stuff so I’ll strip out the Pedestal specific code.
 
 ```clojure
 (defn add-person  [{:keys [json-params] :as request}] ; How I’m handling the data, this may vary depending on your setup
@@ -134,7 +135,9 @@ Lastly, let’s just set up some very basic error handling. Back in our route ha
 
 A very simple try catch that either sends back a 200 on success or catches our validation error and returns a 400 to the user with a message. This will work, although it’s not very informative to an end user why it failed.
 
-Better Error Messages
+
+## Better Error Messages
+
 Lastly, I wanted to just briefly touch on how we might improve the error handling of this system. A good tool for the is the explain-data function provided by the spec. This will create an object that has the details on the fields that cause an error.
 
 ```clojure
@@ -164,6 +167,6 @@ As you can see it gives us the keys that failed, as well as the values themselve
 
 Here we’ve created a handle-api-error function that gets called on error and finds the problem field in the request. The example above only takes the first error, but it would be pretty easy to make this work for multiple errors in a single request. It’s a very basic example, but shows how you can use some of the other functions in spec to provide more specific error messaging.
 
-With all that we’ve reached the end, at this point you have a basic api that validates against some fields, throws an error if it fails, and then does some light formatting to provide an error message. There’s a lot more to spec, and I highly encourage you to learn more about it. There’s a lot of other great stuff in Clojure.spec, this was only meant as a brief overview for one, what I feel is, a fairly common use case. If you’re looking for more info, I’d check out the rationale and overview which goes into what exactly spec is and the ideas behind it, as well as the getting started guide.
+With all that we’ve reached the end, at this point you have a basic api that validates against some fields, throws an error if it fails, and then does some light formatting to provide an error message. There’s a lot more to spec, and I highly encourage you to learn more about it. There’s a lot of other great stuff in Clojure.spec, this was only meant as a brief overview for one, what I feel is, a fairly common use case. If you’re looking for more info, I’d check out the <a href="https://clojure.org/about/spec" target="_blank">rationale and overview</a> which goes into what exactly spec is and the ideas behind it, as well as the <a href="https://clojure.org/guides/spec" target="_blank">getting started guide</a>.
 
-Above code lives in github: https://github.com/peterjewicz/peterjewicz.com/blob/master/samples/clojue_spec_api.clj
+Above code lives in github: <a href="https://github.com/peterjewicz/peterjewicz.com/blob/master/samples/clojue_spec_api.clj" target="_blank">https://github.com/peterjewicz/peterjewicz.com/blob/master/samples/clojue_spec_api.clj</a>

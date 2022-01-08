@@ -6,7 +6,7 @@ description: "Learn To Build a simple Websocket Immutant server with Clojure"
 
 Today we’re going to look at setting up a websocket server using Clojure and Immutant, and then hook it all up with some Clojurescript on the front-end. I recently started a new project, and wanted to get a very basic websocket server setup and running without many dependencies. I also wanted to use Clojure on both ends.
 
-To start I used a bit of code from the following great point on Heroku. I used this as a starter for the server, so some of the code will look similar.
+To start I used a bit of code from the following great point on <a href="https://devcenter.heroku.com/articles/using-websockets-on-heroku-with-clojure-and-immutant" target="_blank"> Heroku.</a> I used this as a starter for the server, so some of the code will look similar.
 
 Start by creating a new Leiningen project.
 
