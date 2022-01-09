@@ -57,7 +57,7 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
       <div className="bg-primary py-28">
-        <div className="max-w-2xl text-center mx-auto text-white">
+        <div className="max-w-2xl px-4 text-center mx-auto text-white">
           <h2 className="text-4xl">Hail and Well Met</h2>
           <p>
             Loremum ipsum sd aow eiryt larary psose itsan
@@ -150,7 +150,7 @@ const BlogIndex = ({ data, location }) => {
             square={true}
           />
           <ProjectCard
-            title="City Encounter"
+            title="City Encounters"
             description="Random city encounters perfect for any fantasy tabletop RPG."
             link="https://apps.apple.com/us/app/city-encounters/id1583857845"
             logo="https://is2-ssl.mzstatic.com/image/thumb/Purple116/v4/1b/3a/cb/1b3acb5b-493a-f500-c58b-203061ff82b2/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp"

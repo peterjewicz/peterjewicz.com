@@ -24,7 +24,21 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className="global-wrapper relative" data-is-root-path={isRootPath}>
+      <div className="absolute px-4 z-10 w-full bg-primary text-white">
+        <ul className="flex justify-end mx-auto max-w-6xl text-lg py-4">
+          <li className="hover:text-primary transition">
+            <Link className="header-link-home" to="/">
+              Home
+            </Link>
+          </li>
+          <li className="hover:text-primary transition">
+            <Link className="header-link-home" to="/blog">
+              Blog
+            </Link>
+          </li>
+        </ul>
+      </div>
       <main>{children}</main>
       <footer className="text-center pb-2">
         © {new Date().getFullYear()}, Peter Jewicz
