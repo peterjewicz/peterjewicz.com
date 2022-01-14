@@ -60,10 +60,9 @@ const BlogIndex = ({ data, location }) => {
         <div className="max-w-2xl px-4 text-center mx-auto text-white">
           <h2 className="text-4xl">Hail and Well Met</h2>
           <p>
-            Loremum ipsum sd aow eiryt larary psose itsan
-            Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan
-            Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan
-            Loremum ipsum sd aow eiryt larary psose itsan Loremum ipsum sd aow eiryt larary psose itsan
+            Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
+            worked on a wide range of projects and used a variety of languages and technology. I love developing, and
+            I'm always excited to jump into a new project and learn new things.
           </p>
         </div>
       </div>
