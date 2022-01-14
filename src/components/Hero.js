@@ -12,7 +12,7 @@ const Hero = () => {
 // overflow-hidden
   return (
     <div className="relative h-screen flex items-center justify-center">
-      <div className="relative z-10 text-center max-w-2xl">
+      <div className="relative z-10 text-center max-w-2xl pb-4  border-b-2 border-secondary">
         <h1 className="text-5xl">Hi! I'm Peter Jewicz</h1>
         <p className="text-xl">I'm a full stack engineer with a passion for programming. Currently working working with Clojure
         and functional development</p>
