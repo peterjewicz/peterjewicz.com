@@ -1,5 +1,5 @@
 ---
-title: Random Tilemap In Clojurescipt With Perlin Noise
+title: Random Tilemap In ClojureScript With Perlin Noise
 date: "2022-02-03T22:12:03.284Z"
 description: "Generate a random tilemap with Perlin Noise in Clojurescript"
 ---
