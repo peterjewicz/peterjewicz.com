@@ -12,7 +12,7 @@ Recently, I was working on a browser based game that called for a randomized til
 
 Perlin noise is a pseudo-random noise function that generates more realistic noise than one that is completely random. Basically, it takes into accounts the surrounding values so that you end up with a more gradual shift in values. This makes it great for things like terrain where you want it to gradually flow and not just have random values that stick out.
 
-There’s a lot of great info on the formula for Perlin noise, I personally found this article to be very helpful to figuring it out. For the purposes of this we can skip the finer details, I’ve put together a simple implementation in Clojurescript that we can use for these purposes.
+There’s a lot of great info on the formula for Perlin noise, I personally found this article to be very helpful to figuring it out. For the purposes of this we can skip the finer details, I’ve put together <a href="https://github.com/peterjewicz/perlin2d" target="_blank">a simple implementation in Clojurescript</a> that we can use for these purposes.
 
 
 ## The Tileset
