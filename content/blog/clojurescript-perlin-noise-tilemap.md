@@ -17,7 +17,7 @@ There’s a lot of great info on the formula for Perlin noise, I personally foun
 
 ## The Tileset
 
-I’m using a simple tile set I found on OpenGamAart with a few modifications, you can find them below. The tiles themselves are unimportant to demo the functionality, so feel free to use another one if you want.
+I’m using a simple tile set I found on <a href="https://opengameart.org/content/overworld-tiles-1" target="_blank">OpenGamArt</a> with a few modifications, you can find them below. The tiles themselves are unimportant to demo the functionality, so feel free to use another one if you want.
 
 <div class="flex-row">
   <img src="/images/perlin/grass.jpg" width="48px" height="48px" alt="grass tile" style="padding: 0px 8px"/>
