@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     colors: {
       // primary: '#31AFD4',
-      primary: '#1076a1',
-      secondary: '#f37272', // change
-      tetriary: "#ffd700",
+      primary: '#1098F7',
+      secondary: '#DE6C83', // change
+      tetriary: "#43bf72",
       quad: "blue",
-      dark: '#90ae45',
+      dark: '#3e536c',
       white: "white",
     },
   },

@@ -56,7 +56,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
-      <div className="bg-primary py-28">
+      <div className="bg-secondary py-28">
         <div className="max-w-2xl px-4 text-center mx-auto text-white">
           <h2 className="text-4xl">Hail and Well Met</h2>
           <p>
@@ -75,7 +75,7 @@ const BlogIndex = ({ data, location }) => {
       <div className="py-28 text-center  mx-auto relative">
         <div
           className="absolute bg-primary w-full"
-          style={{height: "1200px", zIndex: -2, background: 'linear-gradient(180deg, rgba(16,118,161,1) 0%, rgba(16,118,161,1) 47%, rgba(255,255,255,1) 100%)'}}
+          style={{height: "1200px", zIndex: -2, background: 'linear-gradient(180deg, rgba(14,153,247,1) 0%, rgba(14,153,247,1) 47%, rgba(255,255,255,1) 100%)'}}
         >
         </div>
         <div className="text-white pt-28 max-w-2xl mx-auto">
