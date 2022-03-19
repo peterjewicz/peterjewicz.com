@@ -12,38 +12,8 @@ import Totalwebconnections from "../images/totalwebconnections.png"
 import Mellowgolemgames from "../images/mellowgolemgames.png"
 import NitorFitness from "../images/nitorfitness.png"
 
-// <ol style={{ listStyle: `none` }}>
-//   {posts.map(post => {
-//     const title = post.frontmatter.title || post.fields.slug
-//
-//     return (
-//       <li key={post.fields.slug}>
-//         <article
-//           className="post-list-item"
-//           itemScope
-//           itemType="http://schema.org/Article"
-//         >
-//           <header>
-//             <h2>
-//               <Link to={post.fields.slug} itemProp="url">
-//                 <span itemProp="headline">{title}</span>
-//               </Link>
-//             </h2>
-//             <small>{post.frontmatter.date}</small>
-//           </header>
-//           <section>
-//             <p
-//               dangerouslySetInnerHTML={{
-//                 __html: post.frontmatter.description || post.excerpt,
-//               }}
-//               itemProp="description"
-//             />
-//           </section>
-//         </article>
-//       </li>
-//     )
-//   })}
-// </ol>
+
+import PurpleBg from "../images/purple-bg.png"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -56,15 +26,22 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
-      <div className="bg-secondary py-28">
-        <div className="max-w-2xl px-4 text-center mx-auto text-white">
-          <h2 className="text-4xl">Hail and Well Met</h2>
-          <p>
-            Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
-            worked on a wide range of projects and used a variety of languages and technology. I love developing, and
-            I'm always excited to jump into a new project and learn new things.
-          </p>
+      <div className="relative h-screen">
+        <div className="h-screen flex justify-end flex-col text-white"
+             style={{width: "100%", backgroundImage: `url(${PurpleBg})`, backgroundSize: "cover"}}
+        >
+          <div className="max-w-lg pb-8"
+                style={{marginLeft: "200px"}}
+          >
+            <h2 className="text-8xl pb-4">Hail and Well Met</h2>
+            <p>
+              Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
+              worked on a wide range of projects and used a variety of languages and technology. I love developing, and
+              I'm always excited to jump into a new project and learn new things.
+            </p>
+          </div>
         </div>
+
       </div>
       <div className="py-28 text-center max-w-5xl mx-auto">
         <h2 className="text-4xl">From The Blog</h2>

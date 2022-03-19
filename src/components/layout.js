@@ -25,8 +25,8 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper relative" data-is-root-path={isRootPath}>
-      <div className="absolute px-4 z-10 w-full text-white bg-dark">
-        <ul className="flex justify-end mx-auto max-w-6xl text-2xl font-bold py-4">
+      <div className="absolute px-4 z-10 w-full">
+        <ul className="flex mx-auto max-w-6xl text-2xl font-bold py-4">
           <li className="hover:text-primary transition">
             <Link className="header-link-home" to="/">
               Home

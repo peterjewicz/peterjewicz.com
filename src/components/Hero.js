@@ -2,11 +2,12 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import Bg from "../images/bg.png"
-import Cloud from "../images/cloud.png"
 
 const Hero = () => {
   return (
-    <div className="relative h-screen bg-primary">
+    <div className="relative"
+         style={{height: "90vh"}}
+    >
       <div className="flex h-screen items-center justify-center flex-col">
         <div
           className="text-black px-8 py-8 relative z-10 text-center max-w-2xl shadow-xl border-4 border-secondary rounded-lg"
