@@ -6,7 +6,7 @@ import Bg from "../images/bg.png"
 const Hero = () => {
   return (
     <div className="relative"
-         style={{height: "90vh"}}
+         style={{height: "80vh"}}
     >
       <div className="flex h-screen items-center justify-center flex-col">
         <div
