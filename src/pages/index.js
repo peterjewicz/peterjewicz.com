@@ -27,18 +27,21 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
       <div className="relative">
-        <div className="flex justify-end flex-col text-white"
-             style={{height: "125vh", width: "100%", backgroundImage: `url(${PurpleBg})`, backgroundSize: "cover"}}
+        <div className="text-white flex justify-end flex-col"
+             style={{height: "125vh", width: "100%", backgroundImage: `url(${PurpleBg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}
         >
-          <div className="max-w-lg pb-8"
-                style={{marginLeft: "200px"}}
-          >
-            <h2 className="text-8xl pb-4">Hail and Well Met</h2>
-            <p>
-              Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
-              worked on a wide range of projects and used a variety of languages and technology. I love developing, and
-              I'm always excited to jump into a new project and learn new things.
-            </p>
+          <div className="flex justify-center flex-col" style={{height: "60%"}}>
+            <div className="pb-8 well-met-text px-4"
+            >
+              <h2 className="text-8xl pb-4">Hail and Well Met</h2>
+              <div className="max-w-lg">
+                <p>
+                  Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
+                  worked on a wide range of projects and used a variety of languages and technology. I love developing, and
+                  I'm always excited to jump into a new project and learn new things.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
