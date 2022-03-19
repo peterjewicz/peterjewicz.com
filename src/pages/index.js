@@ -54,8 +54,8 @@ const BlogIndex = ({ data, location }) => {
       </div>
 
       <div className="py-28 px-4">
-        <div className="max-w-2xl text-center mx-auto">
-          <h2 className="text-4xl">Past Projects</h2>
+        <div className="max-w-2xl pb-16 text-center mx-auto">
+          <h2 className="text-8xl pb-4 text-primary">Past Projects</h2>
           <p>A small sample of what I've worked on in the past.</p>
         </div>
         <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-8" style={{ listStyle: `none` }}>
