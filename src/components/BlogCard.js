@@ -1,6 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+// For if we want to add images to posts
+// <div style={{height: "180px", overflow: "hidden"}}>
+//   <img src="/images/test.jpg" alt="Blog Image" style={{minHeight: "100%", width: "auto"}} />
+// </div>
 
 const BlogCard = (props) => {
   let {post} = props;
@@ -8,10 +12,11 @@ const BlogCard = (props) => {
 
   return (
     <Link to={post.fields.slug} itemProp="url">
-      <li className="bg-white shadow-lg rounded-lg py-5 my-5 mx-2" key={post.fields.slug}>
+      <li className="border-2 border-secondary rounded-lg py-5 my-5 mx-2 ProjectCard relative" key={post.fields.slug}>
         <article
           itemScope
           itemType="http://schema.org/Article"
+          style={{minHeight: "204px"}}
         >
           <header style={{minHeight: "70px"}}>
             <h2 className="text-secondary text-xl font-bold pb-5 px-5 text-center">

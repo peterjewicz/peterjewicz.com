@@ -16,8 +16,15 @@ p {
   font-weight: 300;
 }
 
-.Button:hover {
-  filter: brightness(0.75);
+
+.well-met-text {
+  margin-left: 100px;
+}
+
+@media(max-width: 768px) {
+  .well-met-text {
+    margin-left: 0px;
+  }
 }
 
 .ProjectCard {

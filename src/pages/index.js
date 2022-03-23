@@ -12,120 +12,53 @@ import Totalwebconnections from "../images/totalwebconnections.png"
 import Mellowgolemgames from "../images/mellowgolemgames.png"
 import NitorFitness from "../images/nitorfitness.png"
 
-// <ol style={{ listStyle: `none` }}>
-//   {posts.map(post => {
-//     const title = post.frontmatter.title || post.fields.slug
-//
-//     return (
-//       <li key={post.fields.slug}>
-//         <article
-//           className="post-list-item"
-//           itemScope
-//           itemType="http://schema.org/Article"
-//         >
-//           <header>
-//             <h2>
-//               <Link to={post.fields.slug} itemProp="url">
-//                 <span itemProp="headline">{title}</span>
-//               </Link>
-//             </h2>
-//             <small>{post.frontmatter.date}</small>
-//           </header>
-//           <section>
-//             <p
-//               dangerouslySetInnerHTML={{
-//                 __html: post.frontmatter.description || post.excerpt,
-//               }}
-//               itemProp="description"
-//             />
-//           </section>
-//         </article>
-//       </li>
-//     )
-//   })}
-// </ol>
+
+import PurpleBg from "../images/purple-bg.png"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes.slice(0, 3);
-
-  console.log(posts)
+  //
+  // console.log(posts)
   // Add social links to the about section you asshole
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
-      <div className="bg-secondary py-28">
-        <div className="max-w-2xl px-4 text-center mx-auto text-white">
-          <h2 className="text-4xl">Hail and Well Met</h2>
-          <p>
-            Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
-            worked on a wide range of projects and used a variety of languages and technology. I love developing, and
-            I'm always excited to jump into a new project and learn new things.
-          </p>
+      <div className="relative">
+        <div className="text-white flex justify-end flex-col"
+             style={{height: "125vh", width: "100%", backgroundImage: `url(${PurpleBg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}
+        >
+          <div className="flex justify-center flex-col" style={{height: "60%"}}>
+            <div className="pb-8 well-met-text px-4"
+            >
+              <h2 className="text-8xl pb-4">Hail and Well Met</h2>
+              <div className="max-w-lg">
+                <p>
+                  Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
+                  worked on a wide range of projects and used a variety of languages and technology. I love developing, and
+                  I'm always excited to jump into a new project and learn new things.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
       <div className="py-28 text-center max-w-5xl mx-auto">
-        <h2 className="text-4xl">From The Blog</h2>
+        <h2 className="text-8xl text-secondary pb-16">From The Blog</h2>
         <ol className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" style={{ listStyle: `none` }}>
           {posts.map((post) => <BlogCard post={post} />)}
         </ol>
-      </div>
-      <div className="py-28 text-center  mx-auto relative">
-        <div
-          className="absolute bg-primary w-full"
-          style={{height: "1200px", zIndex: -2, background: 'linear-gradient(180deg, rgba(14,153,247,1) 0%, rgba(14,153,247,1) 47%, rgba(255,255,255,1) 100%)'}}
-        >
-        </div>
-        <div className="text-white pt-28 max-w-2xl mx-auto">
-          <h2 className="text-4xl">Startups</h2>
-          <p>
-            Always busy, over the years I've worked on a number of startup projects. Below, find
-            the ones still kicking and see where I've worked.
-          </p>
-        </div>
-      </div>
-      <div className="py-28 px-4 md:flex max-w-5xl mx-auto">
-        <div className="px-2 text-center md:text-left text-white">
-          <h3 className="text-4xl">Total Web Connections</h3>
-          <p className="mb-8">Software development company. Currently working on a mix of client and internal projects.</p>
-          <div  className="mb-16">
-            <a href="#"><button className="transition-all bg-secondary text-lg rounded px-10 py-3 shadow Button">Visit</button></a>
-          </div>
-        </div>
-        <div className="px-2">
-          <img className="mx-auto" src={Totalwebconnections} width="640px" alt="Total Web Connections" />
-        </div>
-      </div>
-      <div className="py-28 px-4 flex flex-col-reverse md:flex-row max-w-5xl mx-auto">
-        <div className="px-2">
-          <img className="mx-auto" src={Mellowgolemgames} width="340px" alt="Mellow Golem Games" />
-        </div>
-        <div className="px-2 text-center md:text-right">
-          <h3 className="text-4xl">Mellow Golem Games</h3>
-          <p className="mb-8">Game development and related content. Currently working on RPG games.</p>
-          <div  className="mb-16">
-            <a href="#"><button className="transition-all bg-secondary text-lg rounded px-10 py-3 shadow Button text-white">Visit</button></a>
-          </div>
-        </div>
-      </div>
-      <div className="py-28 px-4 md:flex max-w-5xl mx-auto border-b-2 border-primary">
-        <div className="px-2 text-center md:text-left">
-          <h3 className="text-4xl">Nitor Fitness</h3>
-          <p className="mb-8">Fitness software offering customized workouts tailored to individuals.</p>
-          <div  className="mb-16">
-            <a href="#"><button className="transition-all bg-secondary text-lg rounded px-10 py-3 shadow Button text-white">Visit</button></a>
-          </div>
-        </div>
-        <div className="px-2">
-          <img className="mx-auto" src={NitorFitness} width="340px" alt="Total Web Connections" />
-        </div>
+        <Link to={"/blog"} itemProp="url">
+          <button className="border-2 text-2xl border-primary rounded-lg py-1 px-8 text-primary transition-all hover:text-white hover:bg-primary">View All</button>
+        </Link>
       </div>
 
       <div className="py-28 px-4">
-        <div className="max-w-2xl text-center mx-auto">
-          <h2 className="text-4xl">Past Projects</h2>
+        <div className="max-w-2xl pb-16 text-center mx-auto">
+          <h2 className="text-8xl pb-4 text-primary">Past Projects</h2>
           <p>A small sample of what I've worked on in the past.</p>
         </div>
         <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-8" style={{ listStyle: `none` }}>
