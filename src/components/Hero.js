@@ -9,10 +9,10 @@ const Hero = () => {
          style={{height: "80vh"}}
     >
       <div className="flex h-screen justify-center flex-col">
-        <div>
-          <h2 className="text-6xl">Hi!</h2>
-          <h1 className="text-6xl"> I'm <span className="text-primary">Peter Jewicz</span></h1>
-          <p className="text-xl">I'm a full stack engineer with a passion for programming.</p>
+        <div className="text-center md:text-left">
+          <h2 className="text-4xl md:text-6xl">Hi!</h2>
+          <h1 className="text-4xl md:text-6xl"> I'm <span className="text-primary">Peter Jewicz</span></h1>
+          <p className="pt-6 md:pt-0 text-xl">I'm a full stack engineer building cool stuff with Clojure and others.</p>
         </div>
       </div>
     </div>

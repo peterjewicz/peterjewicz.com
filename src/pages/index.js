@@ -18,8 +18,8 @@ import PurpleBg from "../images/purple-bg.png"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes.slice(0, 3);
-
-  console.log(posts)
+  //
+  // console.log(posts)
   // Add social links to the about section you asshole
 
   return (

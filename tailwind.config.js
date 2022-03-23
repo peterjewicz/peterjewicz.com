@@ -5,7 +5,7 @@ module.exports = {
     colors: {
       // primary: '#31AFD4',
       primary: '#1DCCF8',
-      secondary: '#dc86ea', // change
+      secondary: '#b16dc4', // change
       tetriary: "#43bf72",
       quad: "blue",
       dark: '#3e536c',
