@@ -2,7 +2,9 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import "@fontsource/open-sans/300.css"
-import "@fontsource/lato"
+import "@fontsource/lato/"
+import "@fontsource/lato/700.css"
+import "@fontsource/lato/900.css"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`

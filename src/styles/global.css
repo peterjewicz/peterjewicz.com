@@ -8,8 +8,17 @@
 
 h1, h2, h3, h4, h5 {
   font-family: 'Lato', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
+
+.lessBold {
+  font-weight: 500;
+}
+
+.extraBold {
+  font-weight: 900;
+}
+
 
 p {
   font-family: 'Open Sans', sans-serif;
