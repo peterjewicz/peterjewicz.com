@@ -12,51 +12,43 @@ import Totalwebconnections from "../images/totalwebconnections.png"
 import Mellowgolemgames from "../images/mellowgolemgames.png"
 import NitorFitness from "../images/nitorfitness.png"
 
-// <ol style={{ listStyle: `none` }}>
-//   {posts.map(post => {
-//     const title = post.frontmatter.title || post.fields.slug
-//
-//     return (
-//       <li key={post.fields.slug}>
-//         <article
-//           className="post-list-item"
-//           itemScope
-//           itemType="http://schema.org/Article"
-//         >
-//           <header>
-//             <h2>
-//               <Link to={post.fields.slug} itemProp="url">
-//                 <span itemProp="headline">{title}</span>
-//               </Link>
-//             </h2>
-//             <small>{post.frontmatter.date}</small>
-//           </header>
-//           <section>
-//             <p
-//               dangerouslySetInnerHTML={{
-//                 __html: post.frontmatter.description || post.excerpt,
-//               }}
-//               itemProp="description"
-//             />
-//           </section>
-//         </article>
-//       </li>
-//     )
-//   })}
-// </ol>
+
+const popularPostSlgus = ["/starting-with-clojures-threading-macros/", "/building-a-chat-application-with-clojure/", "/clojurescript-perlin-noise-tilemap/"]
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+  const popularPosts = posts.filter(post => popularPostSlgus.includes(post.fields.slug));
+
+  console.log(popularPosts)
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} filledHeader={true}>
       <Seo title="Peter Jewicz | Blog" />
       <div className="px-8 py-28">
-        <h1 className="text-4xl">Blog</h1>
-        <ol className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" style={{ listStyle: `none` }}>
-          {posts.map((post) => <BlogCard post={post} />)}
-        </ol>
+        <div className="sm:flex">
+          <div className="sm:w-3/4">
+            <h2 className="text-4xl">Recent Blog Posts</h2>
+            <ol className="grid xs:grid-cols-1 sm:grid-cols-2 gap-3" style={{ listStyle: `none` }}>
+              {posts.map((post) => <BlogCard post={post} />)}
+            </ol>
+          </div>
+          <div className="sm:w-1/4 sm:pl-4 py-8">
+            <div className="bg-white shadow-lg rounded-lg px-2 py-2">
+              <h3 className="text-2xl">Popular Posts</h3>
+              {popularPosts.map((post) => {
+                return (
+                  <Link to={post.fields.slug} itemProp="url">
+                    <div className="py-3 text-black hover:text-secondary">
+                      <h4>{ post.frontmatter.title }</h4>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   )

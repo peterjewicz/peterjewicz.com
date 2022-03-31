@@ -6,7 +6,7 @@ module.exports = {
       // primary: '#31AFD4',
       primary: '#1DCCF8',
       secondary: '#b16dc4', // change
-      tetriary: "#43bf72",
+      tetriary: "#0984b6",
       quad: "blue",
       dark: '#3e536c',
       white: "white",

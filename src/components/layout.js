@@ -6,7 +6,7 @@ import "@fontsource/lato/"
 import "@fontsource/lato/700.css"
 import "@fontsource/lato/900.css"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, filledHeader, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -27,14 +27,14 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper relative" data-is-root-path={isRootPath}>
-      <div className="absolute px-4 z-10 w-full">
+      <div className={`absolute px-4 z-10 w-full ${filledHeader ? "bg-tetriary" : null}`}>
         <ul className="flex mx-auto max-w-7xl text-2xl font-bold py-4">
-          <li className="hover:text-primary transition">
+          <li className={`hover:text-primary transition ${filledHeader ? "text-white hover:text-black" : null}`}>
             <Link className="header-link-home" to="/">
               Home
             </Link>
           </li>
-          <li className="hover:text-primary transition">
+          <li className={`hover:text-primary transition ${filledHeader ? "text-white hover:text-black" : null}`}>
             <Link className="header-link-home" to="/blog">
               Blog
             </Link>
