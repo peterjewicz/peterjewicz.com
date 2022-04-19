@@ -30,10 +30,9 @@ const BlogIndex = ({ data, location }) => {
         <div className="text-white flex justify-end flex-col"
              style={{height: "125vh", width: "100%", backgroundImage: `url(${PurpleBg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}
         >
-          <div className="flex justify-center flex-col" style={{height: "60%"}}>
-            <div className="pb-8 well-met-text px-4"
-            >
-              <h2 className="text-8xl pb-4 extraBold">Hail and Well Met</h2>
+          <div className="flex md:justify-center flex-col" style={{height: "60%"}}>
+            <div className="pb-8 well-met-text px-4 text-center md:text-left">
+              <h2 className="text-6xl md:text-8xl pb-4 extraBold">Hail and Well Met</h2>
               <div className="max-w-lg">
                 <p>
                   Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
@@ -47,7 +46,7 @@ const BlogIndex = ({ data, location }) => {
 
       </div>
       <div className="py-28 text-center max-w-5xl mx-auto">
-        <h2 className="text-8xl text-secondary pb-16 extraBold">From The Blog</h2>
+        <h2 className="text-6xl md:text-8xl text-secondary pb-16 extraBold">From The Blog</h2>
         <ol className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" style={{ listStyle: `none` }}>
           {posts.map((post) => <BlogCard post={post} />)}
         </ol>
@@ -58,7 +57,7 @@ const BlogIndex = ({ data, location }) => {
 
       <div className="py-28 px-4">
         <div className="max-w-2xl pb-16 text-center mx-auto">
-          <h2 className="text-8xl pb-4 text-primary extraBold">Past Projects</h2>
+          <h2 className="text-6xl md:text-8xl pb-4 text-primary extraBold">Past Projects</h2>
           <p>A small sample of what I've worked on in the past.</p>
         </div>
         <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-8" style={{ listStyle: `none` }}>
