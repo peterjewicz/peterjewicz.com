@@ -9,7 +9,7 @@ As I’ve explored Clojure more I’ve gotten more comfortable with a lot of the
 It’s a mistake to avoid it though as it really helps clean up your code. Today, we’ll take a brief dive into these macros, and hopefully by the end you’ll feel confident in using them in your own code.
 
 
-Note that this article is only going to deal with the two more common macros, the thread first ```->``` and thread last ```-->```. There are a couple more threading macros Clojure provides, but this should be enough to get you started.
+Note that this article is only going to deal with the two more common macros, the thread first ```->``` and thread last ```->>```. There are a couple more threading macros Clojure provides, but this should be enough to get you started.
 
 Before we jump in, you can also find any of the code examples below here: https://github.com/peterjewicz/peterjewicz.com-code/blob/master/samples/intro-to-threading-macros.clj
 
@@ -104,7 +104,7 @@ Notice how we’re calling the function with only one argument, ```200```, but i
 
 ## Thread Last
 
-All the above is great, but what about functions like map that take the argument in the last position? If we try to use thread first here it won’t work. That’s where thread last ```-->``` comes in. It works exactly like thread first, but passes in the argument as the last one in the function call.
+All the above is great, but what about functions like map that take the argument in the last position? If we try to use thread first here it won’t work. That’s where thread last ```->>``` comes in. It works exactly like thread first, but passes in the argument as the last one in the function call.
 
 An example helps to demonstrate. Below we have a list of stock prices. We want to update the price of each by one, and then filter out any that have a price below ```10``` after the increase.
 
@@ -154,7 +154,7 @@ With that, we want to select the ```addresses```, and then only keep the one tha
 
 This works, but it’s purposely inverting the arguments by using an anonymous function. This ends up making it difficult to read what’s going on as it’s purposely modifying the behavior of ```->```.
 
-- My advice is to avoid doing this like:
+My advice is to avoid doing this like:
 - Using anonymous functions
 - Mixing -> and - - >
 - Defining complex functions in the macro itself.
