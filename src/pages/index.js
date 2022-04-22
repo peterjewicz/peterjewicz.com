@@ -13,6 +13,27 @@ import Mellowgolemgames from "../images/mellowgolemgames.png"
 import NitorFitness from "../images/nitorfitness.png"
 
 
+// <div className="relative">
+//   <div className="text-white flex justify-end flex-col"
+//        style={{height: "125vh", width: "100%", backgroundImage: `url(${PurpleBg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}
+//   >
+//     <div className="flex md:justify-center flex-col" style={{height: "60%"}}>
+//       <div className="pb-8 well-met-text px-4 text-center md:text-left">
+//         <h2 className="text-6xl md:text-8xl pb-4 extraBold">Hail and Well Met</h2>
+//         <div className="max-w-lg">
+//           <p>
+//             Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
+//             worked on a wide range of projects and used a variety of languages and technology. I love developing, and
+//             I'm always excited to jump into a new project and learn new things.
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//
+// </div>
+
+
 import PurpleBg from "../images/purple-bg.png"
 
 const BlogIndex = ({ data, location }) => {
@@ -26,25 +47,17 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
-      <div className="relative">
-        <div className="text-white flex justify-end flex-col"
-             style={{height: "125vh", width: "100%", backgroundImage: `url(${PurpleBg})`, backgroundSize: "cover", backgroundRepeat: "no-repeat"}}
-        >
-          <div className="flex md:justify-center flex-col" style={{height: "60%"}}>
-            <div className="pb-8 well-met-text px-4 text-center md:text-left">
-              <h2 className="text-6xl md:text-8xl pb-4 extraBold">Hail and Well Met</h2>
-              <div className="max-w-lg">
-                <p>
-                  Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
-                  worked on a wide range of projects and used a variety of languages and technology. I love developing, and
-                  I'm always excited to jump into a new project and learn new things.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="text-center py-28 bg-tetriary text-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-6xl md:text-8xl pb-6">Hail and Well Met!</h2>
+          <p>
+            Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
+            worked on a wide range of projects and used a variety of languages and technology. I love developing, and
+            I'm always excited to jump into a new project and learn new things.
+          </p>
         </div>
-
       </div>
+
       <div className="py-28 text-center max-w-5xl mx-auto">
         <h2 className="text-6xl md:text-8xl text-secondary pb-16 extraBold">From The Blog</h2>
         <ol className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" style={{ listStyle: `none` }}>
