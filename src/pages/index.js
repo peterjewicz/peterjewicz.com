@@ -50,7 +50,7 @@ const BlogIndex = ({ data, location }) => {
       <div className="text-center py-28 bg-tetriary text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-6xl md:text-8xl pb-6">Hail and Well Met!</h2>
-          <p>
+          <p className="text-xl pt-8 max-w-3xl mx-auto">
             Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
             worked on a wide range of projects and used a variety of languages and technology. I love developing, and
             I'm always excited to jump into a new project and learn new things.
@@ -115,6 +115,15 @@ const BlogIndex = ({ data, location }) => {
           />
         </div>
 
+      </div>
+
+      <div className="text-center py-28 bg-secondary text-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-6xl md:text-8xl pb-6">Get In Touch.</h2>
+          <a href="mailto:peterjewicz@totalwebconnections">
+            <button className="border-2 text-2xl border-white rounded-lg py-1 px-8 text-white transition-all hover:text-secondary hover:bg-white">Contact</button>
+          </a>
+        </div>
       </div>
     </Layout>
   )
