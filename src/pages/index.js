@@ -59,7 +59,7 @@ const BlogIndex = ({ data, location }) => {
       </div>
 
       <div className="py-28 text-center max-w-5xl mx-auto">
-        <h2 className="text-6xl md:text-8xl text-secondary pb-16 extraBold">From The Blog</h2>
+        <h2 className="text-6xl md:text-8xl pb-16 extraBold">From The Blog</h2>
         <ol className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" style={{ listStyle: `none` }}>
           {posts.map((post) => <BlogCard post={post} />)}
         </ol>
@@ -68,9 +68,9 @@ const BlogIndex = ({ data, location }) => {
         </Link>
       </div>
 
-      <div className="py-28 px-4">
+      <div className="py-28 px-4" style={{background: "#fafafc"}}>
         <div className="max-w-2xl pb-16 text-center mx-auto">
-          <h2 className="text-6xl md:text-8xl pb-4 text-primary extraBold">Past Projects</h2>
+          <h2 className="text-6xl md:text-8xl pb-4 extraBold">Past Projects</h2>
           <p>A small sample of what I've worked on in the past.</p>
         </div>
         <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-8" style={{ listStyle: `none` }}>
@@ -119,7 +119,8 @@ const BlogIndex = ({ data, location }) => {
 
       <div className="text-center py-28 bg-secondary text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-6xl md:text-8xl pb-6">Get In Touch.</h2>
+          <h2 className="text-6xl md:text-8xl">Get In Touch.</h2>
+          <p className="pb-6">Have a project, a question, or just want to chat? Reach out and I'll get back to you.</p>
           <a href="mailto:peterjewicz@totalwebconnections">
             <button className="border-2 text-2xl border-white rounded-lg py-1 px-8 text-white transition-all hover:text-secondary hover:bg-white">Contact</button>
           </a>

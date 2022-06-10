@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     colors: {
       // primary: '#31AFD4',
-      primary: '#1DCCF8',
+      // primary: '#1DCCF8',
+      primary: '#0984b6',
       secondary: '#b16dc4', // change
       tetriary: "#0984b6",
       quad: "blue",

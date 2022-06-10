@@ -12,7 +12,9 @@ const BlogCard = (props) => {
 
   return (
     <Link to={post.fields.slug} itemProp="url">
-      <li className="border-2 border-secondary rounded-lg py-5 my-5 mx-2 ProjectCard relative" key={post.fields.slug}>
+      <li className="rounded-lg py-5 my-5 mx-2 ProjectCard relative" key={post.fields.slug}
+       style={{boxShadow: "0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2)"}}
+       >
         <article
           itemScope
           itemType="http://schema.org/Article"
@@ -26,7 +28,7 @@ const BlogCard = (props) => {
             </h2>
           </header>
 
-          <div className="pt-5 px-5">
+          <div className="pt-5 px-5 text-center">
             <section>
               <p
                 dangerouslySetInnerHTML={{

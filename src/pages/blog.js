@@ -27,15 +27,15 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle} filledHeader={true}>
       <Seo title="Peter Jewicz | Blog" />
       <div className="px-8 py-28">
-        <div className="sm:flex">
-          <div className="sm:w-3/4">
-            <h2 className="text-4xl">Recent Blog Posts</h2>
-            <ol className="grid xs:grid-cols-1 sm:grid-cols-2 gap-3" style={{ listStyle: `none` }}>
+        <div className="md:flex max-w-5xl mx-auto">
+          <div className="md:w-3/4 pr-6">
+            <h2 className="text-3xl md:text-5xl pb-4 extraBold">Recent Blog Posts</h2>
+            <ol className="grid xs:grid-cols-1 md:grid-cols-2 gap-3" style={{ listStyle: `none` }}>
               {posts.map((post) => <BlogCard post={post} />)}
             </ol>
           </div>
-          <div className="sm:w-1/4 sm:pl-4 py-8">
-            <div className="bg-white shadow-lg rounded-lg px-2 py-2">
+          <div className="md:w-1/4 sm:pl-8 py-6">
+            <div className="rounded-lg px-4 py-2" style={{background: "white", boxShadow: "0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2)"}}>
               <h3 className="text-2xl">Popular Posts</h3>
               {popularPosts.map((post) => {
                 return (

@@ -9,7 +9,8 @@ const ProjectCard = (props) => {
   return (
     <a href={link} target="_blank">
       <div
-        className="ProjectCard bg-white shadow-lg rounded-lg py-5 my-5 mx-2 text-center relative"
+        className="ProjectCard bg-white rounded-lg py-5 my-5 mx-2 text-center relative"
+        style={{boxShadow: "0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2)"}}
       >
         <article
           itemScope
