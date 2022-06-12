@@ -24,7 +24,7 @@ const Layout = ({ location, title, filledHeader, children }) => {
               <img src={logoUrl} width="240px" alt="Peterjewicz.com Logo" />
             </Link>
           </div>
-          <ul className="flex text-2xl font-bold py-4 justify-end">
+          <ul className="flex text-xl py-4 justify-end">
             <li className={`hover:text-primary transition ${filledHeader ? "text-white hover:text-black" : null}`}>
               <Link className="header-link-home" to="/">
                 Home
