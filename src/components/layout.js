@@ -6,40 +6,37 @@ import "@fontsource/lato/"
 import "@fontsource/pt-sans/700.css"
 import "@fontsource/lato/900.css"
 
+import LOGO from '../images/logo.png';
+import LOGO_INVERSE from '../images/logo-inverse.png';
+
 const Layout = ({ location, title, filledHeader, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
+  const logoUrl = filledHeader ? LOGO_INVERSE : LOGO;
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
 
   return (
     <div className="global-wrapper relative" data-is-root-path={isRootPath}>
       <div className={`absolute px-4 z-10 w-full ${filledHeader ? "bg-tetriary" : null}`}>
-        <ul className="flex mx-auto max-w-7xl text-2xl font-bold py-4 justify-end">
-          <li className={`hover:text-primary transition ${filledHeader ? "text-white hover:text-black" : null}`}>
+        <div className="mx-auto max-w-7xl flex justify-between items-center">
+          <div>
             <Link className="header-link-home" to="/">
-              Home
+              <img src={logoUrl} width="240px" alt="Peterjewicz.com Logo" />
             </Link>
-          </li>
-          <li className={`hover:text-primary transition ${filledHeader ? "text-white hover:text-black" : null}`}>
-            <Link className="header-link-home" to="/blog">
-              Blog
-            </Link>
-          </li>
-        </ul>
+          </div>
+          <ul className="flex text-2xl font-bold py-4 justify-end">
+            <li className={`hover:text-primary transition ${filledHeader ? "text-white hover:text-black" : null}`}>
+              <Link className="header-link-home" to="/">
+                Home
+              </Link>
+            </li>
+            <li className={`hover:text-primary transition ${filledHeader ? "text-white hover:text-black" : null}`}>
+              <Link className="header-link-home" to="/blog">
+                Blog
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
       <main>{children}</main>
       <footer className="text-center pb-2">
