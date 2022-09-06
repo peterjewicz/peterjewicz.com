@@ -58,13 +58,13 @@ const BlogIndex = ({ data, location }) => {
         </div>
       </div>
 
-      <div className="py-28 text-center max-w-5xl mx-auto">
-        <h2 className="text-6xl md:text-8xl pb-16 extraBold">From The Blog</h2>
-        <ol className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" style={{ listStyle: `none` }}>
+      <div className="py-28 max-w-5xl mx-auto">
+        <h2 className="text-6xl md:text-8xl pb-16 extraBold text-center">From The Blog</h2>
+        <ol className="px-4 max-w-lg mx-auto" style={{ listStyle: `none` }}>
           {posts.map((post) => <BlogCard post={post} />)}
         </ol>
         <Link to={"/blog"} itemProp="url">
-          <button className="border-2 text-2xl border-primary rounded-lg py-1 px-8 text-primary transition-all hover:text-white hover:bg-primary">View All</button>
+          <button className="flex mx-auto border-2 text-2xl border-primary rounded-lg py-1 px-8 text-primary transition-all hover:text-white hover:bg-primary">View All</button>
         </Link>
       </div>
 

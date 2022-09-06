@@ -12,23 +12,22 @@ const BlogCard = (props) => {
 
   return (
     <Link to={post.fields.slug} itemProp="url">
-      <li className="rounded-lg py-5 my-5 mx-2 ProjectCard relative" key={post.fields.slug}
+      <li className="max-w-lg rounded-lg py-6 px-4 my-5 mx-auto ProjectCard relative" key={post.fields.slug}
        style={{boxShadow: "0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2)"}}
        >
         <article
           itemScope
           itemType="http://schema.org/Article"
-          style={{minHeight: "204px"}}
         >
-          <header style={{minHeight: "70px"}}>
-            <h2 className="text-secondary text-xl font-bold pb-5 px-5 text-center">
+          <header>
+            <h2 className="text-secondary text-xl font-bold">
               <Link to={post.fields.slug} itemProp="url">
                 <span itemProp="headline">{title}</span>
               </Link>
             </h2>
           </header>
 
-          <div className="pt-5 px-5 text-center">
+          <div>
             <section>
               <p
                 dangerouslySetInnerHTML={{
