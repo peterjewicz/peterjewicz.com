@@ -12,8 +12,7 @@ const BlogCard = (props) => {
 
   return (
     <Link to={post.fields.slug} itemProp="url">
-      <li className="max-w-lg rounded-lg py-6 px-4 my-5 mx-auto ProjectCard relative" key={post.fields.slug}
-       style={{boxShadow: "0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2)"}}
+      <li className="max-w-lg  py-6 px-4 my-5 mx-auto rounded-lg relative hover:shadow-xl transition-all" key={post.fields.slug}
        >
         <article
           itemScope
@@ -21,10 +20,9 @@ const BlogCard = (props) => {
         >
           <header>
             <h2 className="text-secondary text-xl font-bold">
-              <Link to={post.fields.slug} itemProp="url">
-                <span itemProp="headline">{title}</span>
-              </Link>
+              <span itemProp="headline">{title}</span>
             </h2>
+            <span className="mb-4 block">{post.frontmatter.date}</span>
           </header>
 
           <div>
