@@ -26,9 +26,9 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
-      <div className="text-center py-28 bg-tetriary text-white">
+      <div className="text-center py-28 text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-6xl md:text-6xl pb-6">Hail and Well Met!</h2>
+          <h2 className="text-6xl md:text-6xl pb-6 text-tetriary">Hail and Well Met!</h2>
           <p className="text-xl pt-8 max-w-3xl mx-auto">
             Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
             worked on a wide range of projects and used a variety of languages and technology. I love developing, and
@@ -38,8 +38,8 @@ const BlogIndex = ({ data, location }) => {
       </div>
 
       <div className="py-28 max-w-5xl mx-auto">
-        <h2 className="text-6xl md:text-6xl pb-16 extraBold text-center">From The Blog</h2>
-        <ol className="px-4 max-w-lg mx-auto" style={{ listStyle: `none` }}>
+        <h2 className="text-6xl md:text-6xl pb-16 extraBold">From The Blog</h2>
+        <ol className="max-w-2xl" style={{ listStyle: `none` }}>
           {posts.map((post) => <BlogCard post={post} />)}
         </ol>
         <Link to={"/blog"} itemProp="url">
@@ -47,8 +47,9 @@ const BlogIndex = ({ data, location }) => {
         </Link>
       </div>
 
-      <div className="py-28 px-4" style={{background: "#fafafc"}}>
-        <div className="max-w-2xl pb-16 text-center mx-auto">
+      <div className="py-28 mb-16 mx-auto max-w-6xl px-4" style={{background: "linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5))", borderRadius: "16px"}}>
+        <div className="max-w-2xl pb-16 text-center mx-auto"
+        >
           <h2 className="text-6xl md:text-6xl pb-4 extraBold">Past Projects</h2>
           <p>A small sample of what I've worked on in the past.</p>
         </div>
@@ -96,7 +97,7 @@ const BlogIndex = ({ data, location }) => {
 
       </div>
 
-      <div className="text-center py-28 bg-secondary text-white">
+      <div className="text-center py-28 text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-6xl md:text-6xl">Get In Touch.</h2>
           <p className="pb-6">Have a project, a question, or just want to chat? Reach out and I'll get back to you.</p>
