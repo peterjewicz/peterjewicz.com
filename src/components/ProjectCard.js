@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 
 
 const ProjectCard = (props) => {
-  let {title, description, link, logo, alt} = props;
+  let {title, description, link, logo, alt, tech} = props;
 
-  const style = alt ? {gridRow: 1} : {};
+  const style = alt ? {gridRow: 1, textAlign: "left"} : {textAlign: "right"};
 
 
   return (
@@ -20,8 +20,8 @@ const ProjectCard = (props) => {
                 width="100%"
               />
         </div>
-        <div className="text-right" style={style}>
-          <h2 className="text-primary text-2xl font-bold pb-5 px-5 mt-4">
+        <div style={style}>
+          <h2 className="text-secondary text-3xl font-bold pb-5 mt-4">
             <span itemProp="headline">{title}</span>
           </h2>
           <div className="py-4 px-4 bg shadow-lg">
@@ -32,12 +32,18 @@ const ProjectCard = (props) => {
               itemProp="description"
             />
           </div>
-          <div className="flex justify-end pt-2">
-            <p className="px-1">React |</p>
-            <p className="px-1">Gatsby |</p>
-            <p className="px-1">AWS |</p>
+          <div className={`flex pt-2 ${!alt && "justify-end"}`}>
+            {
+              tech.map(item => {
+                return (
+                  <p className="px-1">{`${item} |`}</p>
+                )
+              })
+            }
           </div>
-          <a target="_blank" className="pt-2 link" href={link}>View Project</a>
+          <div className="px-1 pt-1">
+           <a target="_blank" className="link" href={link}>View Project</a>
+          </div>
         </div>      
       </div>
   )

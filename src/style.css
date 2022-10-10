@@ -10,6 +10,7 @@ body {
 }
 
 .bg { 
-  background: rgba(35,37,49,0.75);
+  /* background: rgba(35,37,49,0.75); */
+  background-color: #171e2f;
   border-radius: 8px;
 }
