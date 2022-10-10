@@ -37,9 +37,9 @@ const BlogIndex = ({ data, location }) => {
         </div>
       </div>
 
-      <div className="py-28 max-w-5xl mx-auto">
-        <h2 className="text-6xl md:text-6xl pb-16 extraBold">From The Blog</h2>
-        <ol className="max-w-2xl" style={{ listStyle: `none` }}>
+      <div className="py-28 max-w-5xl mx-auto styled-bg" >
+        <h2 className="text-6xl md:text-6xl pb-16 text-center extraBold">From The Blog</h2>
+        <ol className="max-w-2xl mx-auto" style={{ listStyle: `none` }}>
           {posts.map((post) => <BlogCard post={post} />)}
         </ol>
         <Link to={"/blog"} itemProp="url">
@@ -47,13 +47,13 @@ const BlogIndex = ({ data, location }) => {
         </Link>
       </div>
 
-      <div className="py-28 mb-16 mx-auto max-w-6xl px-4" style={{background: "linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5))", borderRadius: "16px"}}>
+      <div className="py-28 mb-16 mx-auto max-w-6xl px-4">
         <div className="max-w-2xl pb-16 text-center mx-auto"
         >
           <h2 className="text-6xl md:text-6xl pb-4 extraBold">Past Projects</h2>
           <p>A small sample of what I've worked on in the past.</p>
         </div>
-        <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-8" style={{ listStyle: `none` }}>
+        <div style={{ listStyle: `none` }}>
           <ProjectCard
             title="The Indoor Gardens"
             description="Gatsby built static blog detailing indoor gardening."
@@ -65,20 +65,20 @@ const BlogIndex = ({ data, location }) => {
             description="Simple to use CMS built for small bussiness and freelancers."
             link="https://www.simpleleadtracker.com"
             logo="https://www.simpleleadtracker.com/images/mockup.png"
+            alt={true}
           />
           <ProjectCard
             title="Dungeon Maker"
             description="Dungeon building app for tabletop games and RPGs."
             link="https://apps.apple.com/us/app/dungeon-maker/id1497835992"
             logo="https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/1b/3b/67/1b3b670a-bccb-be03-5707-909f246b585f/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp"
-            square={true}
           />
           <ProjectCard
             title="City Encounters"
             description="Random city encounters perfect for any fantasy tabletop RPG."
             link="https://apps.apple.com/us/app/city-encounters/id1583857845"
             logo="https://is2-ssl.mzstatic.com/image/thumb/Purple116/v4/1b/3a/cb/1b3acb5b-493a-f500-c58b-203061ff82b2/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp"
-            square={true}
+            alt={true}
           />
           <ProjectCard
             title="Narrative Planner"
@@ -91,7 +91,7 @@ const BlogIndex = ({ data, location }) => {
             description="Create pixel masterpieces on your IOS device."
             link="https://apps.apple.com/us/app/the-pixel-artist/id1450760514"
             logo="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/96/fd/b0/96fdb007-b780-2de7-ec95-af71559d6374/AppIcon-1x_U007emarketing-85-220-0-8.png/230x0w.webp"
-            square={true}
+            alt={true}
           />
         </div>
 

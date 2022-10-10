@@ -3,3 +3,13 @@ body {
   background-color: #1a191d;
   color: white;
 }
+
+.styled-bg {
+  background: linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5));
+  border-radius: 16px;
+}
+
+.bg { 
+  background: rgba(35,37,49,0.75);
+  border-radius: 8px;
+}
