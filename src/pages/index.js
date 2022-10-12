@@ -55,13 +55,6 @@ const BlogIndex = ({ data, location }) => {
         </div>
         <div style={{ listStyle: `none` }}>
           <ProjectCard
-            title="The Indoor Gardens"
-            description="Gatsby built static blog detailing indoor gardening."
-            link="https://www.theindoorgardens.com"
-            logo="https://www.theindoorgardens.com/static/logo-c1ee43d0badccb4f1b6dba00fb295c3b.webp"
-            tech={["React", "Gatsby", "AWS"]}
-          />
-          <ProjectCard
             title="Simple Lead Tracker"
             description="Simple to use CMS built for small bussiness and freelancers."
             link="https://www.simpleleadtracker.com"
@@ -73,7 +66,7 @@ const BlogIndex = ({ data, location }) => {
             title="Dungeon Maker"
             description="Dungeon building app for tabletop games and RPGs."
             link="https://apps.apple.com/us/app/dungeon-maker/id1497835992"
-            logo="https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/1b/3b/67/1b3b670a-bccb-be03-5707-909f246b585f/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp"
+            logo="/images/projects/dungeon-maker.jpg"
             tech={["Clojure", "CLJS", "Cordova"]}
           />
           <ProjectCard
