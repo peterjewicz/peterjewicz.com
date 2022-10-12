@@ -12,7 +12,7 @@ const BlogCard = (props) => {
 
   return (
     <Link to={post.fields.slug} itemProp="url">
-      <li className="max-w-lg  py-6 px-4 my-5 mx-auto rounded-lg relative hover:shadow-xl transition-all" key={post.fields.slug}
+      <li className="BlogCard max-w-lg  py-6 px-4 my-5 mx-auto rounded-lg relative transition-all" key={post.fields.slug}
        >
         <article
           itemScope

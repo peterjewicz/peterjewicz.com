@@ -4,15 +4,15 @@
 
 
 a.link, .blog-post a {
-  box-shadow: inset 0 0 0 0 #0984b6;
+  /* box-shadow: inset 0 0 0 0 #0984b6; */
   color: #54b3d6;
-  padding: 0 .25rem;
-  margin: 0 -.25rem;
+  /* padding: 0 .25rem;
+  margin: 0 -.25rem; */
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 a.link:hover, .blog-post a:hover {
   color: #fff;
-  box-shadow: inset 200px 0 0 0 #0984b6;;
+  /* box-shadow: inset 200px 0 0 0 #0984b6; */
 }
 
 .flex-row {
@@ -47,6 +47,11 @@ p {
   .well-met-text {
     margin-left: 0px;
   }
+}
+
+
+.BlogCard:hover {
+  box-shadow: rgba(9, 132, 182, 0.25) 0px 18px 55px, rgba(9, 132, 182, 0.12) 0px -12px 30px, rgba(9, 132, 182, 0.12) 0px 4px 6px, rgba(9, 132, 182, 0.17) 0px 12px 13px, rgba(9, 132, 182, 0.09) 0px -3px 5px;
 }
 
 .ProjectCard {
