@@ -3,45 +3,49 @@ import { Link } from "gatsby"
 
 
 const ProjectCard = (props) => {
-  let {title, description, link, logo, square} = props;
+  let {title, description, link, logo, alt, tech} = props;
+
+  const style = alt ? {gridRow: 1, textAlign: "left"} : {textAlign: "right"};
 
 
   return (
-    <a href={link} target="_blank">
       <div
-        className="ProjectCard bg-white rounded-lg py-5 my-5 mx-2 text-center relative"
-        style={{boxShadow: "0  5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2)"}}
+        className="grid grid-cols-2 gap-4 my-24"
       >
-        <article
-          itemScope
-          itemType="http://schema.org/Article"
-        >
-          <header>
-            <img
-              className="mx-auto"
-              src={logo}
-              alt={`${title} - Logo`}
-              width="85%"
-              style={{maxWidth: square ? "50px" : "120px"}}
-            />
-            <h2 className="text-secondary text-xl font-bold pb-5 px-5 mt-4 text-center">
-              <span itemProp="headline">{title}</span>
-            </h2>
-          </header>
-
-          <div className="pt-5 px-5">
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: description
-                }}
-                itemProp="description"
+        <div>
+          <img
+                className="mx-auto"
+                src={logo}
+                alt={`${title} - Logo`}
+                width="100%"
               />
-            </section>
+        </div>
+        <div style={style}>
+          <h2 className="text-secondary text-3xl font-bold pb-5 mt-4">
+            <span itemProp="headline">{title}</span>
+          </h2>
+          <div className="py-4 px-4 bg shadow-lg">
+            <p
+              dangerouslySetInnerHTML={{
+                 __html: description
+              }}
+              itemProp="description"
+            />
           </div>
-        </article>
+          <div className={`flex pt-2 ${!alt && "justify-end"}`}>
+            {
+              tech.map(item => {
+                return (
+                  <p className="px-1">{`${item} |`}</p>
+                )
+              })
+            }
+          </div>
+          <div className="px-1 pt-1">
+           <a target="_blank" className="link" href={link}>View Project</a>
+          </div>
+        </div>      
       </div>
-    </a>
   )
 
 }
