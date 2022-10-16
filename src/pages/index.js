@@ -30,9 +30,9 @@ const BlogIndex = ({ data, location }) => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-6xl md:text-6xl pb-6 text-tetriary">Hail and Well Met!</h2>
           <p className="text-xl pt-8 max-w-3xl mx-auto">
-            Since my first wordpress site over a decade ago I've been obsessed with growing as a developer. Since then I've
-            worked on a wide range of projects and used a variety of languages and technology. I love developing, and
-            I'm always excited to jump into a new project and learn new things.
+            Since my first Wordpress site over a decade ago I've worked with a huge range of technologies in everything from finance to healthcare. 
+            I'm now a full-stack engineer with a special interest in Clojure/Clojurescript and building games.
+            I'm always interested in hearing about new and exciting projects, say hi!
           </p>
         </div>
       </div>
