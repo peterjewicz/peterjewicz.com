@@ -16,14 +16,14 @@ import NitorFitness from "../images/nitorfitness.png"
 import PurpleBg from "../images/purple-bg.png"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  // const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes.slice(0, 3);
   //
   // console.log(posts)
   // Add social links to the about section you asshole
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={"Peter Jewicz | Full Stack Engineer"}>
       <Seo title="Peter Jewicz | Full Stack Engineer" />
       <Hero />
       <div className="text-center py-28 text-white">
