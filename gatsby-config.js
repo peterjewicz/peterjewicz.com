@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     title: ``,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Peter Jewicz`,
+      summary: `Full Stack Engineer Building With Clojure.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Peter Jewicz | Full Stack Engineer`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Peter_Jewicz`,
     },
   },
   plugins: [
