@@ -5,12 +5,66 @@ body {
 }
 
 .styled-bg {
-  background: linear-gradient(180deg,rgba(35,37,49,.5),rgba(15,15,24,.5));
+  background: linear-gradient(
+    180deg,
+    rgba(35, 37, 49, 0.5),
+    rgba(15, 15, 24, 0.5)
+  );
   border-radius: 16px;
 }
 
-.bg { 
+.bg {
   /* background: rgba(35,37,49,0.75); */
   background-color: #171e2f;
   border-radius: 8px;
+}
+
+/* FIRE TEST STUFF */
+
+.fire {
+  font-size: 24px;
+  filter: blur(0.02em);
+  -webkit-filter: blur(0.02em);
+  margin: 3em auto 0 auto;
+  width: 10em;
+  height: 12em;
+}
+
+.particle {
+  animation: rise 1s ease-in infinite;
+  background-image: radial-gradient(black 20%, black 70%);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 5em;
+  height: 5em;
+  z-index: 20;
+  /* // spread particles out in time and x-position to get desired effect
+	@for $p from 1 through $parts {
+		&:nth-of-type(#{$p}) {
+			animation-delay: 1s * random();
+			left: calc((100% - #{5em}) * #{($p - 1)/$parts});
+		}
+	} */
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10em) scale(0);
+  }
+}
+
+.slideup {
+  transition-delay: 1s;
+  height: 0px !important;
+  overflow: hidden;
 }

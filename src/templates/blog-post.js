@@ -15,6 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        canonicalTag={post.frontmatter.cannonicalTag}
       />
       <article
         className="blog-post max-w-3xl mx-auto py-20 px-4"
@@ -22,7 +23,9 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 className="text-5xl" itemProp="headline">{post.frontmatter.title}</h1>
+          <h1 className="text-5xl" itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
           <p>Published: {post.frontmatter.date}</p>
         </header>
         <section
@@ -56,6 +59,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        cannonicalTag
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
